@@ -40,7 +40,7 @@ document.querySelector('#btn-book').addEventListener('click', function () {
     const ID = this.id;
     const isPaid=false;
 
-    const data = { departure, arrival, date, price, isPaid };
+    
     console.log(data)
 
     fetch('http://localhost:3000/bookings', {
