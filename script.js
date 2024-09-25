@@ -12,14 +12,14 @@ document.querySelector('#btn-search').addEventListener('click', function () {
             const tripsCount = data.trips.length;
             if (data) {
                 for (let i = 0; i < tripsCount; i++) {
-                    const time = moment(data.trips[i].date).format('LT');
+                    const time = moment(data.trips[i].date).format('kk:mm');
                     const price = data.trips[i].price;
                     document.querySelector('#search-results').innerHTML += ` 
         <div class="row-book">
                 <span class="departure">${departure}</span> <span> > </span><span class="arrival">${arrival}</span> 
                 <span class="time">${time}</span>
                 <span class="price">${price} €</span>
-                <button id=${data.trip[i]._id} class= >Book</button>
+                <button id=${data.trips[i]._id} class="book" >Book</button>
         </div>
       `;
                 }
@@ -36,23 +36,39 @@ document.querySelector('#btn-search').addEventListener('click', function () {
     ;
 });
 // envoi des trajets dans le panier
-document.querySelector('#btn-book').addEventListener('click', function () {
+document.querySelector('.book').addEventListener('click', function () {
     const ID = this.id;
     const isPaid=false;
-    fetch(`http://localhost:3000/trips/${ID}`)
+    fetch(`http://localhost:3000/trips/byId/${ID}`)
     .then(response => response.json())
     .then(data => {
             console.log(data)
-            const newTrip= {data.trip
+            const newTrip= {
+                departure : data.trip.departure,
+                arrival: data.trip.arrival,
+                schedule: date.trip.date,
+                price: data.trip.price,
+                isPaid: false,
+            };
+
             fetch('http://localhost:3000/bookings', {
              method: "POST",
 	         headers: { 'Content-Type': 'application/json' },
-             body: JSON.stringify(data)
-    })
+             body: JSON.stringify(newTrip)
+            })
         .then(response => response.json())
 });
-
-
-
 //affichage des trajets dans le panier
+    const time= moment(newTrip.schedule).format('hh:mm')
+     document.querySelector('#cart-items').innerHTML += `           
+    <div id="row-cart">
+    <span class="route">${newTrip.departure} &gt; ${newTrip.arrival}</span> 
+    <span class="time">${time}</span>
+    <span class="price">${newTrip.price}</span>
+    <button class="remove-item">X</button> -->
+    </div> `;
+
+});
+
+// envoi des trajets dans les bookings
 
