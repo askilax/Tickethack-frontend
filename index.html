@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tickethack - Home</title>
-    <!-- favicon si il y a un icone en haut  sur l'onglet-->
-    <link rel="shortcut icon" href="favicon.icon" type="image/x-icon">
+    <link rel="shortcut icon" href="images/train.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body id="body1">
     <div id="container">
         <div id="header">
-            <nav>
+            <nav id="nav">
                 <div class="logo">Tickethack</div>
                 <div class="nav-links">
                     <a href="cart.html">Cart</a>
@@ -26,27 +27,34 @@
         </div>
         <div id="search-result-container">
             <div id="search-section">
-                    <form id="search-form">
-                        <input type="text" id="departure" placeholder="Departure">
-                        <input type="text" id="arrival" placeholder="Arrival">
-                        <input type="date" id="date">
-                        <button type="submit">Search</button>
-                    </form>
+                <form id="search-form">
+                    <input type="text" id="departure" placeholder="Departure">
+                    <input type="text" id="arrival" placeholder="Arrival">
+                    <input type="date" id="date">
+                    <button type="submit">Search</button>
+                </form>
             </div>
 
             <div id="result-section">
-                    <div id="default-message" class="centered">
-                        <img src="images/train.png" alt="Train Icon" class="train-icon">
-                        <p>It's time to book your future trip.</p>
+                <div id="default-message" class="centered">
+                    <img src="images/train.png" alt="Train Icon" class="train-icon">
+                    <p>It's time to book your future trip.</p>
+                </div>
+                <div id="search-results" class="hidden">
+                    <div class="row-book">
+                        <!-- <div id="row-cart">
+                            <span class="route">Paris &gt; Lyon</span>
+                            <span class="time">20:09</span>
+                            <span class="price">103€</span>
+                            <button class="remove-item">Book</button>
+                        </div> -->
                     </div>
-                    <div id="search-results" class="hidden">
-                        <div class="row-book"></div>
-                        <!-- Les résultats de recherche seront ajoutés ici dynamiquement -->
-                    </div>
-            </div>  
-        </div>      
-           
+                </div>
+            </div>
+        </div>
+
         <script src="script.js"></script>
     </div>
 </body>
+
 </html>
