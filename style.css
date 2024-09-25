@@ -65,12 +65,25 @@ nav {
     width: 1000px;
 }
 
-#cart-total{
+#cart-total {
     display: flex;
-    
-    justify-content: space-around;
-    border: #888;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    border:1px solid gray;
+    background-color: rgb(21, 21, 79);
 }
+
+.hidden {
+    display: none;
+  }
+
+#total-price{
+    color: white;
+    align-items: center;
+    padding-left: 40px;
+}
+
 
 #bookings-section {
     display: flex;
