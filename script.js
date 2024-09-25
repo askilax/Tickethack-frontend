@@ -19,7 +19,7 @@ document.querySelector('#btn-search').addEventListener('click', function () {
                 <span class="departure">${departure}</span> <span> > </span><span class="arrival">${arrival}</span> 
                 <span class="time">${time}</span>
                 <span class="price">${price} €</span>
-                <button id=${data.trip[i]._id} class= >Book</button>
+                <button class="book" id=${data.trips[i]._id} class= >Book</button>
         </div>
       `;
                 }
@@ -35,21 +35,21 @@ document.querySelector('#btn-search').addEventListener('click', function () {
         });
     ;
 });
-// envoi des trajets dans le panier
-document.querySelector('#btn-book').addEventListener('click', function () {
-    const ID = this.id;
-    const isPaid=false;
+ //envoi des trajets dans le panier
+// document.querySelector('#btn-book').addEventListener('click', function () {
+//     const ID = this.id;
+//     const isPaid=false;
 
     
-    console.log(data)
+//     console.log(data)
 
-    fetch('http://localhost:3000/bookings', {
-        method: "POST",
-	    headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data)
-    })
-        .then(response => response.json())
-});
+//     fetch('http://localhost:3000/bookings', {
+//         method: "POST",
+// 	    headers: { 'Content-Type': 'application/json' },
+//         body: JSON.stringify(data)
+//     })
+//         .then(response => response.json())
+// })
 
 
 

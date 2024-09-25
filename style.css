@@ -10,13 +10,14 @@
     background-image: url('./images/background.jpg');
 
 }
+
 body {
-    
+
     background-size: cover;
     font-family: Arial, sans-serif;
     background-color: #f1f2f6;
     color: #333;
-    
+
 }
 
 
@@ -30,7 +31,7 @@ body {
 }
 
 nav {
-    display: flex; 
+    display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
@@ -51,32 +52,36 @@ nav {
 }
 
 /* Main content styles */
- #cart-container {
+#cart-container {
     display: flex;
     flex-direction: row;
     justify-content: center;
     height: auto;
-     padding: 200px;
- }
+    padding: 200px;
+}
 
-    #cart-items {
-        height: auto;
-         width: 1000px ;
+#cart-items {
+    height: auto;
+    width: 1000px;
+}
+
+#cart-total{
+    display: flex;
     
+    justify-content: space-around;
+    border: #888;
 }
 
- #bookings-section {
+#bookings-section {
     display: flex;
     flex-direction: row;
     justify-content: center;
     height: auto;
-     padding: 200px;
+    padding: 200px;
 
 }
 
-#container {
-    max-width: auto;  
-}
+
 /* Home page styles */
 #message {
     text-align: center;
@@ -100,8 +105,10 @@ nav {
     justify-content: space-evenly;
 }
 
-#search-section, #result-section {
-    flex: 1; /* Chaque section prend une part égale de l'espace disponible */
+#search-section,
+#result-section {
+    flex: 1;
+    /* Chaque section prend une part égale de l'espace disponible */
     background-color: #ffffff;
     padding: 30px;
     border-radius: 8px;
@@ -109,22 +116,25 @@ nav {
     height: auto;
 }
 
-#search-section{
+#search-section {
     max-width: 500px;
 }
 
-#result-section{
+#result-section {
     max-width: 500px;
 }
 
 /* Styles pour les écrans plus petits */
 @media (max-width: 768px) {
     #search-result-container {
-        flex-direction: column; /* Empilez verticalement sur les petits écrans */
+        flex-direction: column;
+        /* Empilez verticalement sur les petits écrans */
     }
 
-    #search-section, #result-section {
-        width: 100%; /* Pleine largeur sur les petits écrans */
+    #search-section,
+    #result-section {
+        width: 100%;
+        /* Pleine largeur sur les petits écrans */
     }
 }
 
@@ -156,16 +166,6 @@ nav {
     background-color: #3a8f98;
 }
 
-/* Result section styles */
-/* #result-section {
-    background-color: #ffffff;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
-    margin: 20px auto;
-    text-align: center;
-} */
 
 #default-message {
     color: #888;
@@ -186,12 +186,12 @@ nav {
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     width: 1000px;
-    
+
 }
 
- #defaut-book-msg {
+#defaut-book-msg {
 
-    
+
     text-align: center;
     padding: 60px 0;
     background-color: #ffffff;
@@ -199,17 +199,18 @@ nav {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     width: 1000px;
     margin-top: 400px;
-    margin-left: 400px;    
-    
+    margin-left: 400px;
+
 }
 
-#defaut-cart-msg h2, #defaut-book-msg h2 {
+#defaut-cart-msg h2,
+#defaut-book-msg h2 {
     font-size: 24px;
     color: #333;
     margin-bottom: 10px;
 }
 
-.row-book{
+.row-book {
     border-radius: 5px;
     background-color: rgba(238, 216, 179, 0.257);
     display: flex;
@@ -221,7 +222,7 @@ nav {
 }
 
 
-#btn-book{
+.book {
     border-radius: 5px;
     padding: 10px;
     background-color: #00a19b;
@@ -230,29 +231,29 @@ nav {
     cursor: pointer;
 }
 
-#btn-book:hover{
+.book:hover {
     border: 2px solid grey;
 }
 
-#search-results{
+#search-results {
     max-height: 300px;
     overflow-y: scroll;
-    scroll-margin-right: 20px; 
+    scroll-margin-right: 20px;
 }
 
 #search-results::-webkit-scrollbar {
     width: 10px;
-  }
+}
 
 #search-results::-webkit-scrollbar-track {
     background: #e0e0e0;
     border-radius: 10px;
-  }
+}
 
-.date{
+.date {
     display: none;
 }
-  
+
 
 
 /* Responsive design */
@@ -261,7 +262,8 @@ nav {
         flex-direction: column;
     }
 
-    #search-form input, #search-form button {
+    #search-form input,
+    #search-form button {
         width: 100%;
         margin-right: 0;
         margin-bottom: 10px;
