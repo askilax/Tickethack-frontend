@@ -3,15 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tickethack - Home</title>
     <!-- favicon si il y a un icone en haut  sur l'onglet-->
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.icon" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <header></header>
-    <main></main>
-    <footer></footer>
-    <script src="script.js"></script>
+<body id="body1">
+    <div id="container">
+        <div id="header">
+            <nav>
+                <div class="logo">Tickethack</div>
+                <div class="nav-links">
+                    <a href="cart.html">Cart</a>
+                    <a href="bookings.html">Bookings</a>
+                </div>
+            </nav>
+        </div>
+
+        <div id="message">
+            <h1>Explore the world effortlessly by train!</h1>
+            <p>Compare, book and enjoy cheap prices for train tickets: your journey starts on Tickethack.</p>
+        </div>
+        <div id="search-result-container">
+            <div id="search-section">
+                    <form id="search-form">
+                        <input type="text" id="departure" placeholder="Departure">
+                        <input type="text" id="arrival" placeholder="Arrival">
+                        <input type="date" id="date">
+                        <button type="submit">Search</button>
+                    </form>
+            </div>
+
+            <div id="result-section">
+                    <div id="default-message" class="centered">
+                        <img src="images/train.png" alt="Train Icon" class="train-icon">
+                        <p>It's time to book your future trip.</p>
+                    </div>
+                    <div id="search-results" class="hidden">
+                        <div class="row-book"></div>
+                        <!-- Les résultats de recherche seront ajoutés ici dynamiquement -->
+                    </div>
+            </div>  
+        </div>      
+           
+        <script src="script.js"></script>
+    </div>
 </body>
 </html>

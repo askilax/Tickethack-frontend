@@ -1,0 +1,242 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+#body1 {
+    background-image: url('./images/background.jpg');
+
+}
+body {
+    
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    background-color: #f1f2f6;
+    color: #333;
+    
+}
+
+/* Header styles */
+#header {
+    background-color: #ffffff;
+    padding: 15px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #4AB1BA;
+    text-decoration: none;
+}
+
+.nav-links a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #333;
+}
+
+/* Main content styles */
+ #cart-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: auto;
+     padding: 200px;
+ }
+
+    #cart-items {
+        height: auto;
+         width: 1000px ;
+    
+}
+
+ #bookings-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: auto;
+     padding: 200px;
+
+}
+
+#container {
+    max-width: auto;  
+}
+/* Home page styles */
+#message {
+    text-align: center;
+    margin: 60px 0;
+}
+
+#message h1 {
+    font-size: 36px;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+#message p {
+    font-size: 18px;
+    color: #ffffff;
+}
+
+
+#search-result-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 40px auto;
+    gap: 20px; /* Espace entre les deux sections */
+    padding: 20px;
+}
+
+#search-section, #result-section {
+    flex: 1; /* Chaque section prend une part égale de l'espace disponible */
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    height: auto;
+}
+
+
+
+/* Ajustez la largeur maximale pour ces sections */
+#search-section, #result-section {
+    max-width: none; /* Supprimez la limitation de largeur précédente */
+}
+
+/* Styles pour les écrans plus petits */
+@media (max-width: 768px) {
+    #search-result-container {
+        flex-direction: column; /* Empilez verticalement sur les petits écrans */
+    }
+
+    #search-section, #result-section {
+        width: 100%; /* Pleine largeur sur les petits écrans */
+    }
+}
+
+#search-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#search-form input {
+    margin-bottom: 15px;
+    padding: 12px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+#search-form button {
+    background-color: #4AB1BA;
+    color: #ffffff;
+    border: none;
+    padding: 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#search-form button:hover {
+    background-color: #3a8f98;
+}
+
+/* Result section styles */
+/* #result-section {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: center;
+} */
+
+#default-message {
+    color: #888;
+    text-align: center;
+}
+
+.train-icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+/* Cart and Bookings styles */
+#defaut-cart-msg {
+    text-align: center;
+    padding: 60px 0;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 1000px;
+    
+}
+
+ #defaut-book-msg {
+
+    
+    text-align: center;
+    padding: 60px 0;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 1000px;
+    margin-top: 400px;
+    margin-left: 400px;    
+    
+}
+
+#defaut-cart-msg h2, #defaut-book-msg h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+
+
+/* Responsive design */
+@media (max-width: 768px) {
+    #search-form {
+        flex-direction: column;
+    }
+
+    #search-form input, #search-form button {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .nav-links a {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+}
+
+p {
+    text-align: center;
+
+}
