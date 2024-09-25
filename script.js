@@ -14,10 +14,12 @@ document.querySelector('#btn-search').addEventListener('click', function () {
                 for (let i = 0; i < tripsCount; i++) {
                     const time = moment(data.trips[i].date).format('LT');
                     const price = data.trips[i].price;
-                    const dateReturn = data.trip[i].date;
+                    const dateReturn = data.trips[i].date;
                     document.querySelector('#search-results').innerHTML += ` 
         <div class="row-book">
-                <span class="departure">${departure}</span> <span> '>' </span><span class="arrival">${arrival}</span> 
+                <span class="departure">${departure}</span> 
+                <span> \> </span>
+                <span class="arrival">${arrival}</span> 
                 <span class="time">${time}</span>
                 <span class="date">${dateReturn}</span>
                 <span class="price">${price} €</span>
@@ -48,7 +50,3 @@ document.querySelector('#btn-search').addEventListener('click', function () {
         .then(data => {
     
 */
-
-
-//affichage des trajets dans le panier
-

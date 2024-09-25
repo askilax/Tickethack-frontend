@@ -142,7 +142,7 @@ nav {
 }
 
 #search-form button {
-    background-color: #4AB1BA;
+    background-color: #00a19b;
     color: #ffffff;
     border: none;
     padding: 12px;
@@ -209,7 +209,7 @@ nav {
     margin-bottom: 10px;
 }
 
-#row-cart{
+.row-book{
     border-radius: 5px;
     background-color: rgba(238, 216, 179, 0.257);
     display: flex;
@@ -221,7 +221,7 @@ nav {
 }
 
 
-.remove-item{
+#btn-book{
     border-radius: 5px;
     padding: 10px;
     background-color: #00a19b;
@@ -230,7 +230,7 @@ nav {
     cursor: pointer;
 }
 
-.remove-item:hover{
+#btn-book:hover{
     border: 2px solid grey;
 }
 
