@@ -39,14 +39,15 @@ document.querySelector('#btn-search').addEventListener('click', function () {
 document.querySelector('#btn-book').addEventListener('click', function () {
     const ID = this.id;
     const isPaid=false;
-
-    
-    console.log(data)
-
-    fetch('http://localhost:3000/bookings', {
-        method: "POST",
-	    headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data)
+    fetch(`http://localhost:3000/trips/${ID}`)
+    .then(response => response.json())
+    .then(data => {
+            console.log(data)
+            const newTrip= {data.trip
+            fetch('http://localhost:3000/bookings', {
+             method: "POST",
+	         headers: { 'Content-Type': 'application/json' },
+             body: JSON.stringify(data)
     })
         .then(response => response.json())
 });
